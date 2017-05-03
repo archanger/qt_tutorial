@@ -26,14 +26,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp\
         mainwindow.cpp \
     albumlistwidget.cpp \
-    thumbnailproxymodel.cpp
+    thumbnailproxymodel.cpp \
+    albumwidget.cpp \
+    picturedelegate.cpp \
+    picturewidget.cpp \
+    gallerywidget.cpp
 
 HEADERS  += mainwindow.hpp \
     albumlistwidget.hpp \
-    thumbnailproxymodel.hpp
+    thumbnailproxymodel.hpp \
+    picturedelegate.hpp \
+    picturewidget.hpp \
+    gallerywidget.hpp \
+    albumwidget.hpp
 
 FORMS    += mainwindow.ui \
-    albumlistwidget.ui
+    albumlistwidget.ui \
+    albumwidget.ui \
+    picturewidget.ui \
+    gallerywidget.ui
 
 win32:CONFIG(release, debug|release): LIBS += -L$$OUT_PWD/../gallery-core/release/ -lgallery-core
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$OUT_PWD/../gallery-core/debug/ -lgallery-core

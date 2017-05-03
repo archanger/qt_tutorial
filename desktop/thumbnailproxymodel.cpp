@@ -2,7 +2,8 @@
 
 const unsigned int THUMBNAIL_SIZE = 350;
 
-ThumbnailProxyModel::ThumbnailProxyModel(QObject* parent)
+ThumbnailProxyModel::ThumbnailProxyModel(QObject* parent) :
+  QIdentityProxyModel{parent}
 {
 
 }
@@ -30,6 +31,7 @@ void ThumbnailProxyModel::setSourceModel(QAbstractItemModel* sourceModel)
   });
 
   connect(sourceModel, &QAbstractItemModel::rowsInserted, [this](const QModelIndex& parent, int first, int last) {
+    Q_UNUSED(parent);
     generateThumbnails(index(first, 0), last - first + 1);
   });
 }

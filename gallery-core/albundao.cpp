@@ -17,7 +17,7 @@ void AlbumDao::init() const
 {
   if (!_database.tables().contains("albums")) {
     QSqlQuery queqry{_database};
-    queqry.exec("CREATE TABLE albums (id INTEGER PRIVARY KEY AUTOINCREMENT, name TEXT)");
+    queqry.exec("CREATE TABLE albums (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT)");
   }
 }
 
