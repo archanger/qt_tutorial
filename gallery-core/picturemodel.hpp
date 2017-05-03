@@ -32,6 +32,7 @@ public:
   QHash<int, QByteArray> roleNames() const override;
 
   void setAlbum(const Album& album);
+  Q_INVOKABLE void setAlbumId(int id);
   void clearAlbum();
 
 public slots:

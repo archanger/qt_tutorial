@@ -35,6 +35,13 @@ void PictureModel::setAlbum(const Album& album)
   endResetModel();
 }
 
+void PictureModel::setAlbumId(int id)
+{
+  Album album;
+  album.setId(id);
+  setAlbum(album);
+}
+
 void PictureModel::clearAlbum()
 {
   Album album;
@@ -71,6 +78,7 @@ bool PictureModel::isIndexValid(const QModelIndex& index) const
 
 int PictureModel::rowCount(const QModelIndex& parent) const
 {
+  Q_UNUSED(parent);
   return _pictures->size();
 }
 

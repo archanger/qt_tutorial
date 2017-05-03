@@ -7,7 +7,7 @@
 
 class QSqlDatabase;
 
-const QString DATABASE_FILENAME = "gallery.sql";
+const QString DATABASE_FILENAME = "gallery.db";
 
 class DatabaseManager
 {

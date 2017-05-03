@@ -2,6 +2,7 @@ TEMPLATE = subdirs
 
 SUBDIRS += \
     gallery-core \
-    desktop
+    desktop \
+    mobile
 
 desktop.depends = gallery-core
